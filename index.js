@@ -76,9 +76,10 @@ let donnee = [
     technos: ["Php", "React", "NodeJs"],
     admin: true,
   },
+ 
 ];
 
-console.log(donnee[2].pseudo[0]);//m'afffiche le N de Nikola
+//console.log(donnee[2].pseudo[0]);//m'afffiche le N de Nikola
 
 // ==========================================================================================================================================================================================================================================================================================================================================================================================================
 //                L      EEEEE   SSS        TTTTT  RRRR   U   U   CCC   TTTTT  U   U  RRRR   EEEEE   SSS        DDD    EEEEE        CCC    OOO   N   N  TTTTT  RRRR    OOO   L      EEEEE
@@ -90,5 +91,124 @@ console.log(donnee[2].pseudo[0]);//m'afffiche le N de Nikola
 // ==========================================================================================================================================================================================================================================================================================================================================================================================================
 // * * * //Les tructures de contrôle
 
+// sont des moyens de contôler les choses 
 
 
+if (donnee[0].age > donnee[1].age) {
+
+  //console.log(donnee[0].pseudo + " est plus agé que " + donnee[1].pseudo);
+}else{
+//valeur si faux
+}
+
+//on peut effectuer une terner avec if else
+//valeur à tester ? si vrai : si faux;
+//le "?"veux dire teste moi ce qui est à tester sur ma gauche,si c'est vrais je veux que tu me fasse sa et deux points si s'ai faux
+
+
+// =====================================================================================================================================================================================================================================================================================
+//                L      EEEEE       W   W  H   H  III  L      EEEEE
+//      /      /  L      E           W   W  H   H   I   L      E
+//     /      /   L      EEE         W   W  HHHHH   I   L      EEE
+//    /      /    L      E           W W W  H   H   I   L      E
+//   /      /     L      E           W W W  H   H   I   L      E
+//  /      /      LLLLL  EEEEE        W W   H   H  III  LLLLL  EEEEE
+// =====================================================================================================================================================================================================================================================================================
+// * * * //le while tant que 
+
+
+let w = 0;
+
+while (w < 10){
+
+w++;
+//console.log("La valeur de w est de : " + w);
+}
+
+// =====================================================================================================================================================================================================================================================================================
+//                DDD     OOO        W   W  H   H  III  L      EEEEE
+//      /      /  D  D   O   O       W   W  H   H   I   L      E
+//     /      /   D   D  O   O       W   W  HHHHH   I   L      EEE
+//    /      /    D   D  O   O       W W W  H   H   I   L      E
+//   /      /     D  D   O   O       W W W  H   H   I   L      E
+//  /      /      DDD     OOO         W W   H   H  III  LLLLL  EEEEE
+// =====================================================================================================================================================================================================================================================================================
+// * * * //Do while faire une boucle
+let d = 0;
+
+do {
+d++;
+
+console.log(d);
+}while (d < 5);
+
+
+
+// ===========================================================================================================================================================================================================================================================
+//                     FFFFF   OOO   RRRR
+//      /      /       F      O   O  R   R
+//     /      /        FFF    O   O  R   R
+//    /      /         F      O   O  RRRR
+//   /      /          F      O   O  R  R
+//  /      /           F       OOO   R   R
+// ===========================================================================================================================================================================================================================================================
+// * * * // For ces boucles sont trés puissante et elle est souvent utilisé
+//on a 2 façons de faire les boucle for
+
+// for (const bruno of donnee){  // je crees une contante que je prénom bruno et dans data qui est donnée cela veux dire que chaque éléments individuellement je vais l'appeler bruno dans la base de donnée
+//   document.body.innerHTML +=`<li>${bruno.pseudo} - ${bruno.age}ans</li>` ; //for va faire tourner le tableau de nos 3 utilisateurs et à chaque tour on peux donnée une logique un cosole log par exemple
+// }
+
+//résultat de cette boucle = Denis - 33ans
+                         //  Samia - 24ans
+                         //Nikola - 42ans
+
+
+//façon du prof d'utilisation des boucle
+
+//for (i=0; i < donnee.length);//i tu pars de 0 et tant que i est inf à donnee.lenght
+//console.log(donnee.length);//m'affiche 9 dans ma console permet de savoir la longueur du tableau length c'est pour la longueur
+
+//dabord on déclare la valeur de i,jusqu'ou on boucle,on incrémente i si la condition 2 n'est pas remplis
+
+//exemple de le puissance de cette boucle for
+//pour aller chercher des éléments
+// for (i=0; i < donnee.length; i++){
+  //console.log(i);
+   //console.log(donnee[i].technos[0]);//de cette façon on vient de chercher nos 3 éléments
+//    document.body.innerHTML += "<h2>" + donnee[i].technos + "</h2>";  //je viens d'injecter du h2 dans mon body.
+// };
+
+
+// =========================================================================================================================================================================================================================================================================
+//                 SSS   W   W  III  TTTTT   CCC   H   H
+//      /      /  S      W   W   I     T    C   C  H   H
+//     /      /    SSS   W   W   I     T    C      HHHHH
+//    /      /        S  W W W   I     T    C      H   H
+//   /      /         S  W W W   I     T    C   C  H   H
+//  /      /      SSSS    W W   III    T     CCC   H   H
+// =========================================================================================================================================================================================================================================================================
+// * * * //switch évite les répétitions des if 
+
+
+document.body.addEventListener("click", (e) =>{
+// console.log(e.target.id);//permet de savoir sur quoi j'ai cliqué et plus spécialemment sur l'id
+switch(e.target.id){ //si tu as dans l'évènement que tu es allés cherché de e.target.id et dans case tu trouve "javascript" tu me mets une couleur yellow
+
+   case "javascript":
+     document.body.style.background = "yellow";
+     break;
+
+     case "php":
+     document.body.style.background = "violet";
+     break;
+
+     case "python":
+     document.body.style.background = "blue";
+     break;
+
+     default:
+       null;
+}
+       
+})
