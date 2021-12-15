@@ -212,3 +212,73 @@ switch(e.target.id){ //si tu as dans l'évènement que tu es allés cherché de 
 }
        
 })
+
+
+//les différentes méthodes
+
+//une méthode est une fonction qui a été déja codé qui est déjà présente dans le code de javascript,est une fonction à l'aquel on à accés
+
+// ===============================================================================================================================================================================================================================================================================================================================
+//                M   M  EEEEE  TTTTT  H   H   OOO   DDD    EEEEE        SSS   TTTTT  RRRR   III  N   N   GGG
+//      /      /  MM MM  E        T    H   H  O   O  D  D   E           S        T    R   R   I   NN  N  G   G
+//     /      /   M M M  EEE      T    HHHHH  O   O  D   D  EEE          SSS     T    R   R   I   N N N  G
+//    /      /    M   M  E        T    H   H  O   O  D   D  E               S    T    RRRR    I   N  NN  G  GG
+//   /      /     M   M  E        T    H   H  O   O  D  D   E               S    T    R  R    I   N   N  G   G
+//  /      /      M   M  EEEEE    T    H   H   OOO   DDD    EEEEE       SSSS     T    R   R  III  N   N   GGGG
+// ===============================================================================================================================================================================================================================================================================================================================
+// * * * //Méthode string
+
+let string2 = "Javascript est un language orienté objet";
+//console.log(typeof string2);//permet de renseigner sur le type
+//console.log(eval("1"+ 2));//résultat 12 il concaténe les 2
+//console.log(parseInt("1"));// résultat 1 transforme une chaîne de caractére en nombre.
+//console.log(eval(parseInt("1") + 2));
+
+//des méthode pour interroger est-ce que ce n'est pas un chiffre
+//console.log(isNaN(string2));//affiche true ce n'est pas un nombre
+//console.log(isNaN (48));//affiche false ce n'est pas un nombre
+
+//pour connaître la longueur d'une chaîne de caractére
+//console.log(string2.length);//m'affiche 40 il va jusqu'à la longueur d'un chaîne de caractére
+
+//console.log(string2[22]);// affiche u
+//console.log(string2[string2.length - 1]);//comme length commence à 0 dans son index donc on met un -1 pour qu'il affiche dans la console
+//lenght n'est pas égal à l'index, l'index lui commence à zéro alors que la lengh commence à 1 c'est pour cela que l'on mets -1 parfois on 'est obligé d'enlever un parfois
+ 
+
+//indexOf
+//console.log(string2.indexOf("l"));//m'affiche 18 pour me dire que mon index de lettre l commence à 18 et si il ne connaît pas la lettre il dit -1
+
+
+
+
+//let newString = string2.slice(2);
+//console.log(newString);  //m'affiche ''vascript est un language orienté objet''il m'a coupé mes 2 premiers élément et m'a garder le reste dans newsString si je mets 1 il ne coupe rien et ne garde rien
+
+
+// let newString = string2.slice(5, 17);
+// console.log(newString);//il commence à couper à 5 et tu t'arrête à 17 ce qui donne "cript est un"
+
+
+//methode split
+//console.log(string2.split("i"));//partout ou tu vois un "i" tu coupe et tu isoles  es tu mets le reste dans des tableaux cela permets de séparer les choses ""
+// je mets des espaces "" il isole mes mots pour les mettre dans des tableaux
+
+
+
+//pour tout mettre en LowerCas
+//console.log(string2.toLocaleLowerCase());//toute ma chaîne de caractére est en minuscules
+
+//et la c'est le contraire  tout es en majuscule
+//console.log(string2.toUpperCase());
+
+
+
+//le replace
+
+//console.log(string2.replace("Javascript" , "PHP")); //il va chercher partout ou il y Javascript pour le remplacer cette élément par  "PHP"
+
+
+
+
+
