@@ -8,8 +8,6 @@
 // =================================================================================================================================================================================================================================================================================================================================================================================================================================================================================
 // * * * //les tableaux et les types de données
 
-
-
 //Rapels des types de données
 let string = "string";
 let number = 25;
@@ -76,7 +74,6 @@ let donnee = [
     technos: ["Php", "React", "NodeJs"],
     admin: true,
   },
- 
 ];
 
 //console.log(donnee[2].pseudo[0]);//m'afffiche le N de Nikola
@@ -91,20 +88,17 @@ let donnee = [
 // ==========================================================================================================================================================================================================================================================================================================================================================================================================
 // * * * //Les tructures de contrôle
 
-// sont des moyens de contôler les choses 
-
+// sont des moyens de contôler les choses
 
 if (donnee[0].age > donnee[1].age) {
-
   //console.log(donnee[0].pseudo + " est plus agé que " + donnee[1].pseudo);
-}else{
-//valeur si faux
+} else {
+  //valeur si faux
 }
 
 //on peut effectuer une terner avec if else
 //valeur à tester ? si vrai : si faux;
 //le "?"veux dire teste moi ce qui est à tester sur ma gauche,si c'est vrais je veux que tu me fasse sa et deux points si s'ai faux
-
 
 // =====================================================================================================================================================================================================================================================================================
 //                L      EEEEE       W   W  H   H  III  L      EEEEE
@@ -114,15 +108,13 @@ if (donnee[0].age > donnee[1].age) {
 //   /      /     L      E           W W W  H   H   I   L      E
 //  /      /      LLLLL  EEEEE        W W   H   H  III  LLLLL  EEEEE
 // =====================================================================================================================================================================================================================================================================================
-// * * * //le while tant que 
-
+// * * * //le while tant que
 
 let w = 0;
 
-while (w < 10){
-
-w++;
-//console.log("La valeur de w est de : " + w);
+while (w < 10) {
+  w++;
+  //console.log("La valeur de w est de : " + w);
 }
 
 // =====================================================================================================================================================================================================================================================================================
@@ -137,12 +129,10 @@ w++;
 let d = 0;
 
 do {
-d++;
+  d++;
 
-console.log(d);
-}while (d < 5);
-
-
+  console.log(d);
+} while (d < 5);
 
 // ===========================================================================================================================================================================================================================================================
 //                     FFFFF   OOO   RRRR
@@ -160,9 +150,8 @@ console.log(d);
 // }
 
 //résultat de cette boucle = Denis - 33ans
-                         //  Samia - 24ans
-                         //Nikola - 42ans
-
+//  Samia - 24ans
+//Nikola - 42ans
 
 //façon du prof d'utilisation des boucle
 
@@ -174,11 +163,10 @@ console.log(d);
 //exemple de le puissance de cette boucle for
 //pour aller chercher des éléments
 // for (i=0; i < donnee.length; i++){
-  //console.log(i);
-   //console.log(donnee[i].technos[0]);//de cette façon on vient de chercher nos 3 éléments
+//console.log(i);
+//console.log(donnee[i].technos[0]);//de cette façon on vient de chercher nos 3 éléments
 //    document.body.innerHTML += "<h2>" + donnee[i].technos + "</h2>";  //je viens d'injecter du h2 dans mon body.
 // };
-
 
 // =========================================================================================================================================================================================================================================================================
 //                 SSS   W   W  III  TTTTT   CCC   H   H
@@ -188,31 +176,29 @@ console.log(d);
 //   /      /         S  W W W   I     T    C   C  H   H
 //  /      /      SSSS    W W   III    T     CCC   H   H
 // =========================================================================================================================================================================================================================================================================
-// * * * //switch évite les répétitions des if 
+// * * * //switch évite les répétitions des if
 
+document.body.addEventListener("click", (e) => {
+  // console.log(e.target.id);//permet de savoir sur quoi j'ai cliqué et plus spécialemment sur l'id
+  switch (
+    e.target.id //si tu as dans l'évènement que tu es allés cherché de e.target.id et dans case tu trouve "javascript" tu me mets une couleur yellow
+  ) {
+    case "javascript":
+      document.body.style.background = "yellow";
+      break;
 
-document.body.addEventListener("click", (e) =>{
-// console.log(e.target.id);//permet de savoir sur quoi j'ai cliqué et plus spécialemment sur l'id
-switch(e.target.id){ //si tu as dans l'évènement que tu es allés cherché de e.target.id et dans case tu trouve "javascript" tu me mets une couleur yellow
+    case "php":
+      document.body.style.background = "violet";
+      break;
 
-   case "javascript":
-     document.body.style.background = "yellow";
-     break;
+    case "python":
+      document.body.style.background = "blue";
+      break;
 
-     case "php":
-     document.body.style.background = "violet";
-     break;
-
-     case "python":
-     document.body.style.background = "blue";
-     break;
-
-     default:
-       null;
-}
-       
-})
-
+    default:
+      null;
+  }
+});
 
 //les différentes méthodes
 
@@ -244,27 +230,19 @@ let string2 = "Javascript est un language orienté objet";
 //console.log(string2[22]);// affiche u
 //console.log(string2[string2.length - 1]);//comme length commence à 0 dans son index donc on met un -1 pour qu'il affiche dans la console
 //lenght n'est pas égal à l'index, l'index lui commence à zéro alors que la lengh commence à 1 c'est pour cela que l'on mets -1 parfois on 'est obligé d'enlever un parfois
- 
 
 //indexOf
 //console.log(string2.indexOf("l"));//m'affiche 18 pour me dire que mon index de lettre l commence à 18 et si il ne connaît pas la lettre il dit -1
 
-
-
-
 //let newString = string2.slice(2);
 //console.log(newString);  //m'affiche ''vascript est un language orienté objet''il m'a coupé mes 2 premiers élément et m'a garder le reste dans newsString si je mets 1 il ne coupe rien et ne garde rien
-
 
 // let newString = string2.slice(5, 17);
 // console.log(newString);//il commence à couper à 5 et tu t'arrête à 17 ce qui donne "cript est un"
 
-
 //methode split
 //console.log(string2.split("i"));//partout ou tu vois un "i" tu coupe et tu isoles  es tu mets le reste dans des tableaux cela permets de séparer les choses ""
 // je mets des espaces "" il isole mes mots pour les mettre dans des tableaux
-
-
 
 //pour tout mettre en LowerCas
 //console.log(string2.toLocaleLowerCase());//toute ma chaîne de caractére est en minuscules
@@ -272,13 +250,212 @@ let string2 = "Javascript est un language orienté objet";
 //et la c'est le contraire  tout es en majuscule
 //console.log(string2.toUpperCase());
 
-
-
 //le replace
 
 //console.log(string2.replace("Javascript" , "PHP")); //il va chercher partout ou il y Javascript pour le remplacer cette élément par  "PHP"
 
+// ========================================================================================================================================================================================================================================================================================================================================
+//                M   M  EEEEE  TTTTT  H   H   OOO   DDD    EEEEE       N   N  U   U  M   M  BBB    EEEEE  RRRR    SSS
+//      /      /  MM MM  E        T    H   H  O   O  D  D   E           NN  N  U   U  MM MM  B  B   E      R   R  S
+//     /      /   M M M  EEE      T    HHHHH  O   O  D   D  EEE         N N N  U   U  M M M  BBBB   EEE    R   R   SSS
+//    /      /    M   M  E        T    H   H  O   O  D   D  E           N  NN  U   U  M   M  B   B  E      RRRR       S
+//   /      /     M   M  E        T    H   H  O   O  D  D   E           N   N  U   U  M   M  B   B  E      R  R       S
+//  /      /      M   M  EEEEE    T    H   H   OOO   DDD    EEEEE       N   N   UUU   M   M  BBBB   EEEEE  R   R  SSSS
+// ========================================================================================================================================================================================================================================================================================================================================
+// * * * //METHODE NUMBERS
+
+//réduir son nombre de virgule permet de nous garder un certain nombre de chiffre aprés la virgule
+
+let number2 = 42.1234;
+let numberString = "42.12 est un string";
+console.log(number2.toFixed(2)); //garde deux chriffres aprés la virgule
+
+//changer une chaîne de caractére en number string en chiffre
+//console.log(parseInt (numberString));//ou il peut aussi extraire le chiffre d'une chaîne de caractére
+
+//il garde le numéro avec la virgule flottante
+//console.log(parseFloat(numberString));//42.12
+
+//la méthode Math
+console.log(Math.PI); //me produit PI
+
+console.log(Math.round(4.4)); //il arrondi au plus proche
+
+console.log(Math.floor(4.9)); //arrondi à l'inférieur
+
+console.log(Math.ceil(4.1)); // arrondi au plus haut
+
+//les puissances
+console.log(Math.pow(2, 7)); //2 à la puissance 7
+
+//les racines carré
+console.log(Math.sqrt(16)); // égale 4
+
+//le Math random
+
+console.log(Math.random() * 50); //ns donnera un chiffre entre 0 etn 1
+//donnera un chiffre entre 0 et 50
+
+console.log(Math.floor(Math.random() * 50)); //et on obtient un chiffre entier entre 0 et 50 IMPORTANT!!!!!!!
+
+// =================================================================================================================================================================================================================================================================================================================================
+//                M   M  EEEEE  TTTTT  H   H   OOO   DDD    EEEEE         A    RRRR   RRRR     A    Y   Y   SSS
+//      /      /  MM MM  E        T    H   H  O   O  D  D   E            A A   R   R  R   R   A A   Y   Y  S
+//     /      /   M M M  EEE      T    HHHHH  O   O  D   D  EEE         A   A  R   R  R   R  A   A   Y Y    SSS
+//    /      /    M   M  E        T    H   H  O   O  D   D  E           AAAAA  RRRR   RRRR   AAAAA    Y        S
+//   /      /     M   M  E        T    H   H  O   O  D  D   E           A   A  R  R   R  R   A   A    Y        S
+//  /      /      M   M  EEEEE    T    H   H   OOO   DDD    EEEEE       A   A  R   R  R   R  A   A    Y    SSSS
+// =================================================================================================================================================================================================================================================================================================================================
+// * * * //Méthode arrays
+
+let array3 = ["Javascript", "Php", "Python"];
+let array4 = ["Ruby", "solidity"];
+
+// let newArray = array3 + array4;
+// console.log(newArray);            //résutat  Javascript,Php,PythonRuby,solidity
+
+//méthode concatate permet de faire fusionner des tableaux
+//je voudrais concaténé et rester dans un tableau pas commen le modele du dessus il y a 2 méthode pour sa
+
+//méthode 1
+let newArray = array3.concat(array4);
+// console.log(newArray);//résutat  [ "Javascript", "Php", "Python", "Ruby", "solidity" ]
+
+//méthode 2
+//let newArray = [...array3, ...array4];
+//console.log(newArray);//résutat  [ "Javascript", "Php", "Python", "Ruby", "solidity" ]
+// les 3 ... point se dise spray d'opérateur
+
+//la méthode joint
+//permet de casser tout t'on tableau et entre chaque élément de mon tableau tu va mettre une virgule ou un tiret par exemple
+
+//console.log(array3.join("-")); //résultat Javascript-Php-Python "TRES UTILISE"
+
+//méthode slice "IMPORTANTE!!!!!"
+
+//console.log(array3.slice(1));//découpe moi le 1er élément du tableau,résult [ "Php", "Python" ]
+//la méthode slice peut aussi prendre 2 paramétres
+////console.log(newArray.slice(2,3));//tu retires les 2 premier et ensuite tu garde l'index numéro 3 permet de garder pas mal d'élément dans un tableau
+
+//indexOf pour chercher  dans un tableau
+//console.log(array3.indexOf("Python"));//m'affiche le numéro d'index ou se situe mon élément
+
+//cette méthode marche pour les objets et les tableaux
+//array3.forEach((brunos) => console.log(brunos)); //à chaque tours l'élément individuel tu va l'appelés brunos et exécute ensuite cette fonction
+//le forEach permet d'énumer les choses une par une
+
+//2 méthodes pour checked des choses dans un tableau
+
+//console.log(array3.every((bruno) => bruno === "Php"));
+//la méthode every remplace un élément par bruno ce qui permet de tester chaque éléments dans mon tableau pour voir s'il y a Php dans chacun de ces éléments et comme il n'y sont pas tous comme cela il renvoie false
+
+//console.log(array3.some((bruno) => bruno === "Php"));//est ce que quelque par il y a écrit Php oui donc "true"
+
+//le shift est une méthode qui permet de casser le tableau
+//il enléve le premier index du tableau,
+
+// let shift = array3.shift();
+// console.log(shift); //affiche Javascript
+
+//console.log(array3.pop());//il retire le dernier élément de mon tableau
+
+//méthode splice
+//const restArray = array3.splice(1, 1, "C++"); //à l'emplacement n°1 , tu enléves un élément et m'ajoute, C++ et il garde dans ma constante l'élément qui a été enlevé
+//console.log(array3);//Array(3) [ "Javascript", "C++", "Python" ] lesson Les donnée 1h47
+
+// =======================================================================================================================================================================================================================================================================================================================================================================
+//                III  M   M  PPPP    OOO   RRRR   TTTTT    A    N   N  TTTTT       PPPP    OOO   U   U  EEEEE         A    RRRR   RRRR     A    Y   Y
+//      /      /   I   MM MM  P   P  O   O  R   R    T     A A   NN  N    T         P   P  O   O  U   U  E            A A   R   R  R   R   A A   Y   Y
+//     /      /    I   M M M  P   P  O   O  R   R    T    A   A  N N N    T         P   P  O   O  U   U  EEE         A   A  R   R  R   R  A   A   Y Y
+//    /      /     I   M   M  PPPP   O   O  RRRR     T    AAAAA  N  NN    T         PPPP   O   O  U   U  E           AAAAA  RRRR   RRRR   AAAAA    Y
+//   /      /      I   M   M  P      O   O  R  R     T    A   A  N   N    T         P      O   O  U   U  E           A   A  R  R   R  R   A   A    Y
+//  /      /      III  M   M  P       OOO   R   R    T    A   A  N   N    T         P       OOO    UUU   EEEEE       A   A  R   R  R   R  A   A    Y
+// =======================================================================================================================================================================================================================================================================================================================================================================
+// * * * //important poue array
+
+let arrayNumber = [4, 74, 28, 12, 1];
+console.log(arrayNumber.reduce((x, y) => x + y)); //"119"
+
+//ajouter un élément à ce tableau
+//console.log(arrayNumber.push("coucou"));
+//console.log(arrayNumber);//Array(6) [ 4, 74, 28, 12, 1, "coucou" ]
+
+//FILTER, SORT, MAP.3 Méthodes de puisssant
+
+//console.log(arrayNumber.filter((nombre) => nombre > 10));//je met un nom a ma fonction pour aller checher dans le tableau des nombres supérieur à 10
+
+//console.log(arrayNumber.sort());//Array(5) [ 1, 12, 28, 4, 74 ]classe par ordre de chiffre
+
+//console.log(arrayNumber.sort((a, b) => b - a));//dans cette méthode a étant plus petit que b est bien il classe du plus grand au plus petit Array(5) [ 74, 28, 12, 4, 1 ]
+
+//exemple des 2 méthodes du dessus qui travail emsemble
+
+console.log(
+  arrayNumber
+    .filter((nombre) => nombre > 10)
+    .sort(
+      //rappel je met un nom dans mon paramétre pour le retrouver dans mon tableau plus tard
+      (a, b) => a - b
+    )
+); //1er il me fait un tri des chiffres sup à 10 et classe par ordre des chiffres
+
+console.log(arrayNumber.sort());
+console.log(arrayNumber.sort((a, b) => b - a));
+
+//Le MAP Important!
+
+//arrayNumber.map((bruno) => console.log(bruno));//M'énumére un par un tout les chiffres
+//arrayNumber.map((bruno) => (document.body.innerHTML += bruno));//affiche 74281241 m'affiche à l'écran
+
+//arrayNumber.map((bruno) => (document.body.innerHTML += `<li> ${bruno}</li>`));//me liste tout mon tableau à l'écran
+
+//même résultat qu'au-dessus avec une présentation convenable
+// document.body.innerHTML = arrayNumber
+//   .map((bruno) => `<li> ${bruno}</li>`)
+//   .join(""); //join remplace les virgules du map par du vide("")
+//Mon tableau, je t'ajoute la méthode .map ,à chaque tour de map je vais appeler cela bruno , et que tu me montre à l'écran à quoi ressemble ce bruno et à la fin je fais un join
+//je viens de faire un map sur un tableau 
+
+
+//map sur objet c'est trés puissant!!!!!!!
+
+// ========================================================================================================================================================================================================================================================================================================================================
+//                M   M  EEEEE  TTTTT  H   H   OOO   DDD    EEEEE        OOO   BBB      JJJ  EEEEE   CCC   TTTTT   SSS
+//      /      /  MM MM  E        T    H   H  O   O  D  D   E           O   O  B  B      J   E      C   C    T    S
+//     /      /   M M M  EEE      T    HHHHH  O   O  D   D  EEE         O   O  BBBB      J   EEE    C        T     SSS
+//    /      /    M   M  E        T    H   H  O   O  D   D  E           O   O  B   B     J   E      C        T        S
+//   /      /     M   M  E        T    H   H  O   O  D  D   E           O   O  B   B  J  J   E      C   C    T        S
+//  /      /      M   M  EEEEE    T    H   H   OOO   DDD    EEEEE        OOO   BBBB    JJ    EEEEE   CCC     T    SSSS
+// ========================================================================================================================================================================================================================================================================================================================================
+// * * * //méthode Objects
+
+
+//lesson les données 2h.04
+document.body.innerHTML = donnee
+.filter((usager)=> usager.admin === false) //me filtre uniquement les admins qui sont false 
+.filter((usager)=> usager.pseudo.includes("i"))//me filtre uniquement les pseudo qui on un i
+.sort((a,b)=> b.age - a.age)
+.map(
+  (usager) => 
+`
+
+<div class="user-card">    
+
+<h2>${usager.pseudo}</h2>
+
+<p>Age : ${usager.age} ans</p>
+
+<p>Status : ${usager.admin ? "Modérateur" : "Membre"}</p>
+
+</div>
 
 
 
 
+`
+)
+.join("");
+
+//admin est-ce strictement true = modérateur sinon écrit membre 
+//rappel  ${} appelle d'une variable
+//classe du plus grand au plus petit b-a
