@@ -363,15 +363,15 @@ let newArray = array3.concat(array4);
 //const restArray = array3.splice(1, 1, "C++"); //à l'emplacement n°1 , tu enléves un élément et m'ajoute, C++ et il garde dans ma constante l'élément qui a été enlevé
 //console.log(array3);//Array(3) [ "Javascript", "C++", "Python" ] lesson Les donnée 1h47
 
-// =======================================================================================================================================================================================================================================================================================================================================================================
-//                III  M   M  PPPP    OOO   RRRR   TTTTT    A    N   N  TTTTT       PPPP    OOO   U   U  EEEEE         A    RRRR   RRRR     A    Y   Y
-//      /      /   I   MM MM  P   P  O   O  R   R    T     A A   NN  N    T         P   P  O   O  U   U  E            A A   R   R  R   R   A A   Y   Y
-//     /      /    I   M M M  P   P  O   O  R   R    T    A   A  N N N    T         P   P  O   O  U   U  EEE         A   A  R   R  R   R  A   A   Y Y
-//    /      /     I   M   M  PPPP   O   O  RRRR     T    AAAAA  N  NN    T         PPPP   O   O  U   U  E           AAAAA  RRRR   RRRR   AAAAA    Y
-//   /      /      I   M   M  P      O   O  R  R     T    A   A  N   N    T         P      O   O  U   U  E           A   A  R  R   R  R   A   A    Y
-//  /      /      III  M   M  P       OOO   R   R    T    A   A  N   N    T         P       OOO    UUU   EEEEE       A   A  R   R  R   R  A   A    Y
-// =======================================================================================================================================================================================================================================================================================================================================================================
-// * * * //important poue array
+// ===========================================================================================================================================================================================================================================================================================================================================
+//                       A    RRRR   RRRR     A    Y   Y       III  M   M  PPPP    OOO   RRRR   TTTTT    A    N   N  TTTTT
+//      /      /        A A   R   R  R   R   A A   Y   Y        I   MM MM  P   P  O   O  R   R    T     A A   NN  N    T
+//     /      /        A   A  R   R  R   R  A   A   Y Y         I   M M M  P   P  O   O  R   R    T    A   A  N N N    T
+//    /      /         AAAAA  RRRR   RRRR   AAAAA    Y          I   M   M  PPPP   O   O  RRRR     T    AAAAA  N  NN    T
+//   /      /          A   A  R  R   R  R   A   A    Y          I   M   M  P      O   O  R  R     T    A   A  N   N    T
+//  /      /           A   A  R   R  R   R  A   A    Y         III  M   M  P       OOO   R   R    T    A   A  N   N    T
+// ===========================================================================================================================================================================================================================================================================================================================================
+// * * * // ARRAY IMPORTANT
 
 let arrayNumber = [4, 74, 28, 12, 1];
 console.log(arrayNumber.reduce((x, y) => x + y)); //"119"
@@ -384,7 +384,7 @@ console.log(arrayNumber.reduce((x, y) => x + y)); //"119"
 
 //console.log(arrayNumber.filter((nombre) => nombre > 10));//je met un nom a ma fonction pour aller checher dans le tableau des nombres supérieur à 10
 
-//console.log(arrayNumber.sort());//Array(5) [ 1, 12, 28, 4, 74 ]classe par ordre de chiffre
+console.log(arrayNumber.sort());//Array(5) [ 1, 12, 28, 4, 74 ]classe par ordre de chiffre
 
 //console.log(arrayNumber.sort((a, b) => b - a));//dans cette méthode a étant plus petit que b est bien il classe du plus grand au plus petit Array(5) [ 74, 28, 12, 4, 1 ]
 
@@ -429,33 +429,237 @@ console.log(arrayNumber.sort((a, b) => b - a));
 // ========================================================================================================================================================================================================================================================================================================================================
 // * * * //méthode Objects
 
+//extêmement précieux
 
 //lesson les données 2h.04
-document.body.innerHTML = donnee
-.filter((usager)=> usager.admin === false) //me filtre uniquement les admins qui sont false 
-.filter((usager)=> usager.pseudo.includes("i"))//me filtre uniquement les pseudo qui on un i
-.sort((a,b)=> b.age - a.age)
-.map(
-  (usager) => 
-`
+//user est le nom que j'ai donnée pour chaque tour que je vais effectuer dans ma boucle et qui va dans h2  représente ce que donne user
+// un map sur des objets et beaucoup plus puissance que un map sur un tableau
+// document.body.innerHTML = donnee
+// //.filter((usager)=> usager.admin === false) //me filtre uniquement les admins qui sont false 
+// .filter((usager)=> usager.pseudo.includes("i"))//me filtre uniquement les pseudo qui on un i
+// .sort((a,b)=> b.age - a.age)//permet de ranger dans un object
+// .map(
+//   (usager) => 
+// `
 
-<div class="user-card">    
+// <div class="user-card">    
 
-<h2>${usager.pseudo}</h2>
+// <h2>${usager.pseudo}</h2>
 
-<p>Age : ${usager.age} ans</p>
+// <p>Age : ${usager.age} ans</p>
 
-<p>Status : ${usager.admin ? "Modérateur" : "Membre"}</p>
+// <p>Status : ${usager.admin ? "Modérateur" : "Membre"}</p>
 
-</div>
-
-
+// </div>
 
 
-`
-)
-.join("");
+
+
+// `
+// )
+// .join("");
 
 //admin est-ce strictement true = modérateur sinon écrit membre 
 //rappel  ${} appelle d'une variable
 //classe du plus grand au plus petit b-a
+
+
+
+// ====================================================================================================================================================================================================================================================================
+//                DDD      A    TTTTT  EEEEE   SSS
+//      /      /  D  D    A A     T    E      S
+//     /      /   D   D  A   A    T    EEE     SSS
+//    /      /    D   D  AAAAA    T    E          S
+//   /      /     D  D   A   A    T    E          S
+//  /      /      DDD    A   A    T    EEEEE  SSSS
+// ====================================================================================================================================================================================================================================================================
+// * * * //DATES
+
+
+
+
+//on a 3 formats différent en date
+
+
+
+//les dates classique 1er format
+
+
+let date = new Date(); //me renvoie la date exate d'aujourd'hui :Sat Dec 25 2021 16:46:12 GMT+0100 (heure normale d’Europe centrale)
+console.log(date);
+
+//2iém format
+//format que l'on rencontre le plus souvent en javascript
+//Timestamp est le nombre de secondes qui se sont écoulées entre le 1er janvier 1970 et aujourd'hui em milleseconde 
+//parse et une méthode qui appartient à l'objet Date le point permet d'avancer dans la méthode objet
+let Timestamp = Date.parse(date);//parse permet de prendre une date en javascript en Timestamp
+//console.log(Timestamp);//1640447611000 ce n'est pas des millisecondes
+
+
+
+//3iém format trés répandu
+//IsoString
+//console.log(date.toISOString());//2021-12-25T15:59:18.323Z les milli secondes sont à la fin
+let iso = date.toISOString(); 
+
+
+
+
+//je vais créer une fonction pour rendre lisible ma date
+//je créer une fonction avec un paramétre ou je vais y glisser dedans "la date d'un format que je vais choisir"
+function dateParser(rigal) {
+  let newDate = new Date (rigal).toLocaleDateString("fr-FR", {
+    year: "numeric",
+    month:"long",
+    day:"numeric",
+    hour:"numeric",
+    minute:"numeric",
+  } );
+  return newDate;
+}
+
+//console.log(dateParser(date));//25 décembre 2021
+//console.log(dateParser(Timestamp));
+//console.log(dateParser(iso));
+
+
+
+
+// ==========================================================================================================================================================================================================================================================================================================================
+//                DDD    EEEEE   SSS   TTTTT  RRRR   U   U   CCC   TTTTT  U   U  RRRR   III  N   N   GGG
+//      /      /  D  D   E      S        T    R   R  U   U  C   C    T    U   U  R   R   I   NN  N  G   G
+//     /      /   D   D  EEE     SSS     T    R   R  U   U  C        T    U   U  R   R   I   N N N  G
+//    /      /    D   D  E          S    T    RRRR   U   U  C        T    U   U  RRRR    I   N  NN  G  GG
+//   /      /     D  D   E          S    T    R  R   U   U  C   C    T    U   U  R  R    I   N   N  G   G
+//  /      /      DDD    EEEEE  SSSS     T    R   R   UUU    CCC     T     UUU   R   R  III  N   N   GGGG
+// ==========================================================================================================================================================================================================================================================================================================================
+// * * * //DESTRUCTURING
+
+
+let moreData = {
+  destVar: ["Element 1", "Element 2"]
+};
+//LESSON LES DONNEES 3H01
+const {destVar} = moreData //à partir de maintenant j'ai créer un raccourci pour éviter les répétitions quand je solicite un des élément dans mon tableau
+//const destVar = moreData.destVar; //veut dire la même chose qu'au dessus
+// console.log(destVar);
+
+// console.log(moreData.destVar[0]);
+
+
+let array5 = [70, 80, 90];
+
+// console.log(array5[0]);
+// console.log(array5[1]);
+// console.log(array5[2]);
+
+//pour éviter les répétitions de mes index de tableau je créer des variables
+
+let [x, y, z] = array5;
+//console.log(x, y, z);//mes trois lettres ont pris les valeurs et type de mon array5
+
+
+//lesson les données 3h10
+
+//pour ma variable iso je vais créer mon raccouri 
+//console.log(iso);
+
+const dateDestructuring = (vachercher) => {
+//je vais couper ma chaîne de caractére
+let newDate = vachercher.split("T")[0];//m'a enlever mon T,et m'a garder un seul tableau
+//je vais ensuite casser ma chaîne de caractére pour pouvoir mieux travailler avec
+newDate.split("-");//partout ou tu as un tiret tu me casses le truc
+//console.log(newDate.split("-"));//m'affiche  [ "2021", "12", "25" ]
+//le résultat du split = [ "2021", "12", "25" ] tu me l'attribus à mes 3 nouvelle variable a, m, d
+
+ let [a, m, d] = newDate.split("-");//à savoir les string,number,boolean non pas besoin d'être déclarer avec des const ou let
+
+ //je retourne les choses dans le bon ordre en joingant en plus les /
+ return[ d, m, a].join("/");// [ "25"/ "12"*/ "2021" ]
+
+};
+
+
+//console.log(dateDestructuring(iso));
+
+
+
+
+
+
+
+// ===================================================================================================================================================================================================================================================================================================================
+//                L      EEEEE   SSS        DDD      A    TTTTT    A     SSS   EEEEE  TTTTT   SSS
+//      /      /  L      E      S           D  D    A A     T     A A   S      E        T    S
+//     /      /   L      EEE     SSS        D   D  A   A    T    A   A   SSS   EEE      T     SSS
+//    /      /    L      E          S       D   D  AAAAA    T    AAAAA      S  E        T        S
+//   /      /     L      E          S       D  D   A   A    T    A   A      S  E        T        S
+//  /      /      LLLLL  EEEEE  SSSS        DDD    A   A    T    A   A  SSSS   EEEEE    T    SSSS
+// ===================================================================================================================================================================================================================================================================================================================
+// * * * //les datasets
+
+//sont des données que l'on peut mettre dans des balises qui sont en quelque sorte des objets
+
+const h3js = document.getElementById("javascript");//j'ai sélectionné mon h3 id titre javascript
+//console.log(h3js.dataset.lang);// m'affiche js
+
+const h3 = document.querySelectorAll("h3");
+
+//h3.forEach((tintin) => console.log(tintin.dataset));//
+
+
+
+
+// ==============================================================================================================================================================================================================================================================================================
+//                L      EEEEE   SSS        RRRR   EEEEE   GGG   EEEEE  X   X
+//      /      /  L      E      S           R   R  E      G   G  E       X X
+//     /      /   L      EEE     SSS        R   R  EEE    G      EEE      X
+//    /      /    L      E          S       RRRR   E      G  GG  E       X X
+//   /      /     L      E          S       R  R   E      G   G  E      X   X
+//  /      /      LLLLL  EEEEE  SSSS        R   R  EEEEE   GGGG  EEEEE  X   X
+// ==============================================================================================================================================================================================================================================================================================
+// * * * //les Regex
+
+
+//expression régulière permet de tester des choses voir si elle correspondent
+
+let mail = "rigalrigal2014@outlook.fr"
+//console.log(mail.search(/rigal/));//si la valeur ou le type que j'ai entre mes parenthéses correspond avec mon adresse mail il renvoie 0 si il ne trouve aucune correspondance il me renvoi -1
+ 
+// la méthode replace  remplace un élément par un autre
+
+//console.log(mail.replace(/rigal/, "phillipe "));//phillipe rigal2014@outlook.fr
+
+
+// console.log(mail.match(/RIgal/i)); //permet de chercher l'élément dans mon mail et le i enlève la sensibilité à la case me renvoie null si il ne trouve pas
+// console.log(mail.match(/[zh]/)); // est-ce que tu trouves un zh dans la chaîne de caractére
+// console.log(mail.match([123]));//il cherche aussi les chiffres
+
+
+//pour chercher et trouver à tout pris un chiffre 
+// console.log(mail.match(/\d/));
+
+
+// //pour chercher et trouver à tout pris une lettre
+// console.log(mail.match(/[a-z]/));
+
+
+//comment contrôler un mail
+//Et on commence par le petit chapeau "/^" ,tout les caractéres chiffres ou lettres"\w", "_-"le tiret du bas et le tiret du milieu, plus un "@", aprés le @ il peut y avoir des chiffres et des lettres sur le nom de domaine "\w",
+//- des tirets aussi sur le nom de domaine plus un point "\./" avec des lettres de a à z "a-z" , et pas plus de 4 et pas moins de deux "{2,4}" , et je termine mon contrôle avec le"$",avec un "i",
+//pour dire que l'on est pas sensible à la case.
+
+//lesson les données 3h28
+//console.log(mail.match(/^[\w_-]+@[\w-]+\.[a-z]{2,4}$/i));
+
+
+
+//important pour ma proabilté............................................................................................
+
+//pour séparer de longue combinaison de chiffre
+
+let separator = 02262834410510
+
+//je vais passer ce nombre en chaîne de caractére,ensuite j'utilise replace qui utilise la regex comme séparateur et mettre en place des points tout les 3 rangs
+
+console.log(separator.toString().replace(/\B(?=(\d{2})+(?!\d))/g, " "));
